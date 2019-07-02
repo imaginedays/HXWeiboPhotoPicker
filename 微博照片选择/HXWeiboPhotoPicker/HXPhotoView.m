@@ -183,6 +183,13 @@ static NSString *HXPhotoSubViewCellId = @"photoSubViewCellId";
         }
     }
     if (model.type == HXPhotoModelMediaTypeCamera) {
+        if (self.dataList.count <= 1 && self.showFirstAddPhotoAlert) {
+            if ([self.delegate respondsToSelector:@selector(showFisrtAddPhotoAlertView)]) {
+                [self.delegate showFisrtAddPhotoAlertView];
+                return;
+            }
+        }
+        
         [self goPhotoViewController];
     }else {
         HXDatePhotoPreviewViewController *vc = [[HXDatePhotoPreviewViewController alloc] init];

@@ -43,7 +43,7 @@
 @property (strong, nonatomic) HXPhotoManager *manager;
 @property (strong, nonatomic) NSIndexPath *currentIndexPath; // 自定义转场动画时用到的属性
 @property (strong, nonatomic) HXCollectionView *collectionView;
-
+@property (assign, nonatomic) BOOL showFirstAddPhotoAlert;  //!< 第一次添加照片之前是否显示弹框
 
 /**
  是否把相机功能放在外面 默认 NO
