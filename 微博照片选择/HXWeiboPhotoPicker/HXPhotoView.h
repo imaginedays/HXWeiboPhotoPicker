@@ -28,6 +28,8 @@
 // 删除网络图片的地址
 - (void)photoView:(HXPhotoView *)photoView deleteNetworkPhoto:(NSString *)networkPhotoUrl;
 
+- (void)showFisrtAddPhotoAlertView;
+
 /**
  当前删除的模型
 
